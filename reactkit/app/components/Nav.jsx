@@ -7,7 +7,7 @@ const Nav = createClass({
     render() {
         return (
             <nav className="main-nav">
-                <Link className="main-nav__link" to="/">App Name</Link>
+                <Link className="main-nav__link" to="/">CLAM</Link>
                 <div className="main-nav__menu-container">
                     <Link className="main-nav__link" to="/">Home</Link>
                     <Link className="main-nav__link" to="about">About (Routing Example)</Link>
