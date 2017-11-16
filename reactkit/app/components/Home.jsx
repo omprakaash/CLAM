@@ -3,7 +3,7 @@ import Users from 'app/components/users';
 
 const Home = createClass({
     displayName: 'Home',
-    
+
     render() {
         const { onClickUser, selectedUser, usersList } = this.props;
 
@@ -11,7 +11,7 @@ const Home = createClass({
             <div>
                 <div className="home__banner">
                     <div className="home__logo-image" />
-                    <h1 className="home__banner-heading">App Name</h1>
+                    <h1 className="home__banner-heading">CLAM</h1>
                     <div className="home__tagline">Tagline</div>
                 </div>
                 <div className="home__main-container">
