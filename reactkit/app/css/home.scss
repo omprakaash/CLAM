@@ -1,22 +1,13 @@
+@import 'globals';
+
 .home {
     &__banner {
-        border: 1px solid black;
-        height: 200px;
+        background-color: $transparentBlack;
+        height: 220px;
         margin: 30px auto;
         padding-bottom: 30px;
         text-align: center;
         width: 70%;
-    }
-
-    &__logo-image {
-        background: url('../images/clam.jpeg');
-        background-repeat: no-repeat;
-        display: inline-block;
-        height: 85px;
-        margin-right: 10px;
-        position: relative;
-        top: 10px;
-        width: 85px;
     }
 
     &__banner-heading {
@@ -32,6 +23,16 @@
 
     &__main-container {
         display: flex;
+    }
+
+    &__lab-select {
+        padding: 15px;
+        margin-top: 10px;
+
+        table {
+            width: 50%;
+            display: inline-table;
+        }
     }
 }
 

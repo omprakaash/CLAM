@@ -3,8 +3,14 @@ import Users from 'app/components/users';
 
 const Home = createClass({
     displayName: 'Home',
-    roomNumbers: ['B220','B230','B240','B250','B260','B270'],
-
+    roomNumbers: [
+        'B220',
+        'B230',
+        'B240',
+        'B250',
+        'B260',
+        'B270'
+    ],
 
     /**
      * Renders the html for a single set of lab computers. Takes a room number
@@ -13,9 +19,11 @@ const Home = createClass({
      * @return {jsx}            the html
      */
     renderLab(roomNumber, index) {
-      // TODO: Create a new jsx file responsible for rendering each of the
-      // labs using requests from the database.
-      return (<h1 key={roomNumber}>{roomNumber}</h1>)
+        // TODO: Create a new jsx file responsible for rendering each of the
+        // labs using requests from the database.
+        return (
+            <td key={roomNumber}>{roomNumber}</td>
+        )
     },
 
     /**
@@ -37,14 +45,17 @@ const Home = createClass({
         return (
             <div>
                 <div className="home__banner">
-                    <div className="home__logo-image"/>
                     <h1 className="home__banner-heading">CLAM</h1>
                     <div className="home__tagline">
-                        A Computer Lab Activity Monitor</div>
-                </div>
-                {this.renderLabs()}
-                <div className="home__main-container">
-                    <Users onClickUser={onClickUser} selectedUser={selectedUser} usersList={usersList}/>
+                        A Computer Lab Activity Monitor
+                    </div>
+                    <div className="home__lab-select">
+                        <table>
+                            <tr>
+                                {this.renderLabs()}
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         );

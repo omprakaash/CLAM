@@ -1,8 +1,14 @@
-$backgroundcolor: #EFECCA;
+$backgroundImage: "https://images.unsplash.com/photo-1466553556096-7e2c49388e34?auto=format&fit=crop&w=2689&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D";
+$defaultTextColor: white;
+$transparentBlack: rgba(0,0,0,1);
 
 body {
-    background: $backgroundcolor;
-    color: #333;
+    background: url($backgroundImage) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: $defaultTextColor;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
 }
