@@ -5,6 +5,7 @@ const Home = createClass({
     displayName: 'Home',
     roomNumbers: ['B220','B230','B240','B250','B260','B270'],
 
+
     /**
      * Renders the html for a single set of lab computers. Takes a room number
      * in order to specify the room.
@@ -12,6 +13,8 @@ const Home = createClass({
      * @return {jsx}            the html
      */
     renderLab(roomNumber, index) {
+      // TODO: Create a new jsx file responsible for rendering each of the
+      // labs using requests from the database.
       return (<h1 key={roomNumber}>{roomNumber}</h1>)
     },
 

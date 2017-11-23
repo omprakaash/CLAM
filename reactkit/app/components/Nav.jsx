@@ -10,7 +10,6 @@ const Nav = createClass({
                 <Link className="main-nav__link" to="/">CLAM</Link>
                 <div className="main-nav__menu-container">
                     <Link className="main-nav__link" to="/">Home</Link>
-                    <Link className="main-nav__link" to="about">About (Routing Example)</Link>
                 </div>
             </nav>
         );

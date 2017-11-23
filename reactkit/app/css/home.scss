@@ -1,6 +1,6 @@
 .home {
     &__banner {
-        background: #A7A37E;
+        border: 1px solid black;
         height: 200px;
         margin: 30px auto;
         padding-bottom: 30px;
@@ -27,7 +27,6 @@
     }
 
     &__tagline {
-        color: #EFECCA;
         font-size: 30px;
     }
 

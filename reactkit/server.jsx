@@ -42,7 +42,7 @@ app.use((req, res) => {
         <html>
             <head>
                 <meta charset="utf-8">
-                <title>React Redux Fullstack Starter</title>
+                <title>LNH CLAM</title>
 
                 <link rel="stylesheet" href="/styles.css">
                 <script>
