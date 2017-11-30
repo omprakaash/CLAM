@@ -3,6 +3,7 @@ import Users from 'app/components/users';
 
 const Home = createClass({
     displayName: 'Home',
+    currentRoom: 'B240',
     roomNumbers: [
         'B220',
         'B230',
@@ -13,26 +14,37 @@ const Home = createClass({
     ],
 
     /**
-     * Renders the html for a single set of lab computers. Takes a room number
-     * in order to specify the room.
+     * Switches the currently displayed room by making a get request to the
+     * backend api to retrieve the proper data, and then passing this data
+     * into a lab render component.
+     * @param  {string} roomNumber The room which should be rendered
+     * @return {null}            no return
+     */
+    switchRoom(roomNumber) {
+        this.currentRoom = roomNumber;
+    },
+
+    /**
+     * Renders a link that, upon a click, will switch the screen to render a
+     * display of statistics relating to the lab's usage.
      * @param  {int} roomNumber the number of the room to render
      * @return {jsx}            the html
      */
-    renderLab(roomNumber, index) {
+    renderLabSelector(roomNumber, index) {
         // TODO: Create a new jsx file responsible for rendering each of the
         // labs using requests from the database.
-        return (
-            <td key={roomNumber}>{roomNumber}</td>
-        )
+        return (<td key={roomNumber}>
+            <a className="home__green-highlight" href="#" onClick={(e) => this.switchRoom(roomNumber)}>{roomNumber}</a>
+        </td>)
     },
 
     /**
      * Takes the array of room numbers that need to be displayed, and renders
-     * each one by mapping the numbers to the renderLab function
+     * each lab selector by mapping the numbers to the renderLab function
      * @return {jsx} the set of rooms
      */
-    renderLabs() {
-        return this.roomNumbers.map(this.renderLab);
+    renderLabSelectors() {
+        return this.roomNumbers.map(this.renderLabSelector);
     },
 
     /**
@@ -42,23 +54,24 @@ const Home = createClass({
     render() {
         const {onClickUser, selectedUser, usersList} = this.props;
 
-        return (
-            <div>
-                <div className="home__banner">
-                    <h1 className="home__banner-heading">CLAM</h1>
-                    <div className="home__tagline">
-                        A Computer Lab Activity Monitor
-                    </div>
-                    <div className="home__lab-select">
-                        <table>
-                            <tr>
-                                {this.renderLabs()}
-                            </tr>
-                        </table>
-                    </div>
+        return (<div>
+            <div className="home__banner">
+                <h1 className="home__banner-heading">CLAM</h1>
+                <div className="home__tagline">
+                    A Computer Lab Activity Monitor
                 </div>
+                <div className="home__lab-select">
+                    <table>
+                        <tbody>
+                            <tr>
+                                {this.renderLabSelectors()}
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h1>{this.currentRoom}</h1>
             </div>
-        );
+        </div>);
     }
 });
 

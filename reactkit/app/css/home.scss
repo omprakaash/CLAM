@@ -34,6 +34,10 @@
             display: inline-table;
         }
     }
+
+    &__green-highlight {
+        color: $defaultLinkColor;
+    }
 }
 
 .users {

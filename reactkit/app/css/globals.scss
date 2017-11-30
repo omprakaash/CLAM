@@ -1,6 +1,7 @@
 $backgroundImage: "https://images.unsplash.com/photo-1466553556096-7e2c49388e34?auto=format&fit=crop&w=2689&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D";
 $defaultTextColor: white;
 $transparentBlack: rgba(0,0,0,1);
+$defaultLinkColor: #00FF00;
 
 body {
     background: url($backgroundImage) no-repeat center center fixed;
