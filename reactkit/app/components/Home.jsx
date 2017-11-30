@@ -1,5 +1,5 @@
 import React, {createClass} from 'react';
-import Users from 'app/components/users';
+import Lab from 'app/components';
 
 const Home = createClass({
     displayName: 'Home',
@@ -69,7 +69,7 @@ const Home = createClass({
                         </tbody>
                     </table>
                 </div>
-                <h1>{this.currentRoom}</h1>
+                <Lab name={this.currentRoom} />
             </div>
         </div>);
     }
