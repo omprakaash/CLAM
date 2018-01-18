@@ -32,7 +32,7 @@ module.exports = {
                     fallback: 'style-loader',
                     use: [
                         'css-loader',
-                        'autoprefixer-loader?browsers=last 3 versions',
+                        'postcss-loader',
                         'sass-loader?outputStyle=expanded'
                     ]
                 })
